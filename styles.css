@@ -1,0 +1,603 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header and Navigation */
+.navbar {
+    background-color: #2c3e50;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo h1 {
+    color: #ecf0f1;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #3498db;
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ecf0f1;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Main content */
+main {
+    min-height: calc(100vh - 140px);
+    padding: 2rem 0;
+}
+
+.hero {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.hero h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.hero p {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Meetings section */
+.meetings {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.meetings h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    text-align: center;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.meeting-info {
+    text-align: center;
+}
+
+.meeting-info > p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.meeting-option {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+    border-left: 4px solid #3498db;
+}
+
+.meeting-option h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.meeting-option p {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.meeting-option a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.meeting-option a:hover {
+    text-decoration: underline;
+}
+
+/* Resources section */
+.resources {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.resources h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    text-align: center;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.resource-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.resource-link {
+    background-color: #3498db;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.resource-link:hover {
+    background-color: #2980b9;
+}
+
+/* Service structure section */
+.service-structure {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.service-structure h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    text-align: center;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.structure-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.structure-link {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.structure-link:hover {
+    background-color: #d5dbdb;
+}
+
+/* Contact section */
+.contact {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.contact h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    text-align: center;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.contact p {
+    margin-bottom: 1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.contact a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Additional page styles */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.content-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.content-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.content-card p {
+    margin-bottom: 1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.content-card ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content-card li {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.content-card a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.content-card a:hover {
+    text-decoration: underline;
+}
+
+/* Position list styles */
+.position-list {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.position-item {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 6px;
+    border-left: 4px solid #3498db;
+}
+
+.position-item h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.position-item p {
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* Tradition info styles */
+.tradition-info {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
+
+.tradition-info h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.contribution-methods {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.method-item {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+}
+
+.method-item h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.expenses-info {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
+
+.expenses-info h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+/* Download list styles */
+.download-list {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.download-item {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 4px solid #3498db;
+}
+
+.download-item h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.download-item p {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.download-link {
+    background-color: #3498db;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.download-link:hover {
+    background-color: #2980b9;
+    text-decoration: none;
+}
+
+/* Schedule info styles */
+.schedule-info {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.schedule-item {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 4px solid #3498db;
+}
+
+.schedule-item h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.schedule-item p {
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+/* Event list styles */
+.event-list {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.event-item {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 4px solid #e74c3c;
+}
+
+.event-item h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.event-item p {
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+/* Access info styles */
+.access-info {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.access-item {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 4px solid #27ae60;
+}
+
+.access-item h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.access-item p {
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+/* Timezone info styles */
+.timezone-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.timezone-item {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.timezone-item h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.timezone-item p {
+    color: #555;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: #2c3e50;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .meetings h2,
+    .resources h2,
+    .service-structure h2,
+    .contact h2 {
+        font-size: 1.5rem;
+    }
+
+    .resource-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .structure-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero,
+    .meetings,
+    .resources,
+    .service-structure,
+    .contact {
+        padding: 1rem;
+    }
+
+    .meeting-option {
+        padding: 1rem;
+    }
+}
