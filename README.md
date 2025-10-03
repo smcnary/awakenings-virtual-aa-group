@@ -1,6 +1,6 @@
-# Awakening Group (NS) - Virtual AA Group
+# AA Group name to be determined - Virtual AA Group
 
-A website for the Awakening Group (NS), a virtual Alcoholics Anonymous group based on the original Awakening Group (NS) Tulsa website.
+A website for AA Group name to be determined, a virtual Alcoholics Anonymous group.
 
 ## About
 
