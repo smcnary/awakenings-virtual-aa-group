@@ -1,0 +1,62 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/__pycache__/
+backend/.pytest_cache/
+
+# Build outputs
+frontend/.next/
+frontend/out/
+backend/dist/
+
+# Environment files
+.env
+.env.local
+.env.production
+backend/.env
+backend/.env.local
+
+# Database
+*.db
+*.sqlite
+
+# Logs
+*.log
+logs/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker
+docker-compose*.yml
+Dockerfile*
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# Test files
+coverage/
+.nyc_output/
+test-results/
+
+# Temporary files
+tmp/
+temp/
