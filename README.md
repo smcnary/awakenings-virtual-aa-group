@@ -130,8 +130,8 @@ aa-virtual/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/smcnary/aa-virtual.git
-   cd aa-virtual
+   git clone https://github.com/smcnary/awakenings-virtual-aa-group.git
+   cd awakenings-virtual-aa-group
    ```
 
 2. **Install dependencies**
@@ -508,7 +508,7 @@ npm run typecheck        # TypeScript check
 ## 📞 Support & Contact
 
 ### Technical Support
-- **Issues**: [GitHub Issues](https://github.com/smcnary/aa-virtual/issues)
+- **Issues**: [GitHub Issues](https://github.com/smcnary/awakenings-virtual-aa-group/issues)
 - **Documentation**: This README and inline code comments
 - **Email**: awakeningnstulsa@gmail.com
 
@@ -530,6 +530,11 @@ This project is for educational and service purposes. All A.A. literature and ma
 - **Online Link**: https://join.freeconferencecall.com/timhwalton
 - **Phone**: (951) 799-9267
 - **Meeting ID**: timhwalton
+
+## Contact
+
+- **Email**: awakeningnstulsa@gmail.com
+- **Facebook**: Private group (request to join)
 
 ---
 
