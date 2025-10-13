@@ -1,0 +1,24 @@
+{
+  "name": "aa-virtual-group",
+  "version": "1.0.0",
+  "description": "AA Virtual Group website with Next.js frontend and Python backend",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000",
+    "build": "cd frontend && npm run build",
+    "start": "cd frontend && npm run start",
+    "docker:dev": "docker-compose up --build",
+    "docker:prod": "docker-compose -f docker-compose.prod.yml up --build",
+    "setup": "npm install && cd frontend && npm install && cd ../backend && pip install -r requirements.txt",
+    "db:migrate": "cd backend && alembic upgrade head",
+    "db:init": "cd backend && alembic revision --autogenerate -m 'Initial migration'",
+    "db:reset": "cd backend && alembic downgrade base && alembic upgrade head"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": ["aa", "alcoholics-anonymous", "virtual", "meetings", "nextjs", "fastapi"],
+  "author": "AA Virtual Group",
+  "license": "MIT"
+}
