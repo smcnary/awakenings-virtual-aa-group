@@ -1,15 +1,9 @@
 {
   "buildCommand": "cd frontend && npm run build",
   "outputDirectory": "frontend/.next",
-  "installCommand": "npm run setup",
+  "installCommand": "cd frontend && npm install",
   "devCommand": "cd frontend && npm run dev",
   "framework": "nextjs",
-  "functions": {
-    "app/api/**/*.py": {
-      "runtime": "python3.9",
-      "maxDuration": 10
-    }
-  },
   "redirects": [
     {
       "source": "/healthz",
