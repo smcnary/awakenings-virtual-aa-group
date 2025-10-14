@@ -3,7 +3,7 @@ from typing import Optional
 
 class Settings(BaseSettings):
     # Database
-    database_url: str = "postgresql://user:password@localhost:5432/aa_virtual_group"
+    database_url: str = "sqlite:///./aa_virtual.db"
     
     # Security
     secret_key: str = "your-secret-key-here"
