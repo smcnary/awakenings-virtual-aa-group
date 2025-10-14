@@ -9,7 +9,10 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 from app.db.database import Base
+# Import all models to ensure they are included in migrations
+from app.models.user import User, ServiceAssignment, UserAuditLog, LoginSession, MeetingAttendance
 from app.models.group import GroupInfo, TrustedServant, Meeting, Resource
+from app.models.chatbot import ChatSession, ChatMessage, ChatResource, ChatAnalytics
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
