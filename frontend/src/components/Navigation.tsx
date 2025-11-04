@@ -11,7 +11,6 @@ export default function Navigation() {
 
   const navItems = [
     { href: "/", label: "Home" },
-    { href: "/trusted-servants", label: "Trusted Servants" },
     { href: "/7th-tradition", label: "7th Tradition" },
     { href: "/downloads", label: "Downloads" },
     { href: "/calendar", label: "Calendar" },
@@ -30,7 +29,7 @@ export default function Navigation() {
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <h1 className="text-lg sm:text-xl font-semibold">AA Group name to be determined</h1>
+            <h1 className="text-lg sm:text-xl font-semibold">Our Fellow Travelers</h1>
           </div>
           
           {/* Desktop navigation */}

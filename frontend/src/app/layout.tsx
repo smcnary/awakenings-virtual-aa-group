@@ -8,7 +8,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AA Group name to be determined - Virtual AA Group",
+  title: "Our Fellow Travelers - Virtual AA Group",
   description: "A virtual Alcoholics Anonymous group meeting daily at 7:00 a.m. Central Time",
 };
 
