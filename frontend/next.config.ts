@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  webpack: (config, { dir, isServer }) => {
+  webpack: (config, { dir }) => {
     // Get absolute path to src directory
     const srcPath = path.resolve(dir, "src");
     
@@ -18,14 +18,16 @@ const nextConfig: NextConfig = {
     
     // Set the @ alias to point to src directory
     // This allows imports like @/lib/utils to resolve to src/lib/utils
-    config.resolve.alias["@"] = srcPath;
-    
-    // Preserve existing aliases
-    const existingAliases = { ...config.resolve.alias };
+    // Important: Use path.resolve to ensure absolute path
     config.resolve.alias = {
-      ...existingAliases,
+      ...config.resolve.alias,
       "@": srcPath,
     };
+    
+    // Debug: Log the alias configuration (only in development)
+    if (process.env.NODE_ENV === "development") {
+      console.log("Webpack alias @ configured to:", srcPath);
+    }
     
     return config;
   },
