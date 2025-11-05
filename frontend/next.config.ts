@@ -8,11 +8,27 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  webpack: (config) => {
+  webpack: (config, { dir }) => {
+    const srcPath = path.join(dir, "src");
+    
+    // Ensure alias is set correctly
+    if (!config.resolve) {
+      config.resolve = {};
+    }
+    if (!config.resolve.alias) {
+      config.resolve.alias = {};
+    }
+    
     config.resolve.alias = {
       ...config.resolve.alias,
-      "@": path.resolve(__dirname, "./src"),
+      "@": srcPath,
     };
+    
+    // Ensure modules array includes node_modules
+    if (!config.resolve.modules) {
+      config.resolve.modules = ["node_modules"];
+    }
+    
     return config;
   },
 };
