@@ -9,25 +9,14 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   webpack: (config, { dir }) => {
-    const srcPath = path.join(dir, "src");
+    // Use absolute path resolution - dir is already the project root (frontend/)
+    const srcPath = path.resolve(dir, "src");
     
-    // Ensure alias is set correctly
-    if (!config.resolve) {
-      config.resolve = {};
-    }
-    if (!config.resolve.alias) {
-      config.resolve.alias = {};
-    }
-    
+    config.resolve = config.resolve || {};
     config.resolve.alias = {
-      ...config.resolve.alias,
+      ...(config.resolve.alias || {}),
       "@": srcPath,
     };
-    
-    // Ensure modules array includes node_modules
-    if (!config.resolve.modules) {
-      config.resolve.modules = ["node_modules"];
-    }
     
     return config;
   },
